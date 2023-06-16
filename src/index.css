@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @property --color-a {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+  }
+  @property --color-b {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+  }
+  @property --color-c {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+  }
+}
+
+@layer components {
+  .range {
+    appearance: none;
+    width: 100%;
+    background: white;
+    height: 2px;
+  }
+  .range::-webkit-slider-thumb {
+    appearance: none;
+    background: var(--color-b);
+    border: 2px solid white;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    cursor: pointer;
+  }
+  .range::-moz-range-thumb {
+    appearance: none;
+    background: var(--color-b);
+    border: 2px solid white;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    cursor: pointer;
+  }
+}
+
+/**
+ * In case you want to learn how to write this in plain CSS,
+ * I left that exmaple in too. The only thing you need to find out
+ * yourself, is which classname should be added to what element ;)
+ */
+
+/*
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  --color-a: #ccc;
+  --color-b: #afaf;
+  --color-c: #33aa;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100dvh;
+}
+
+.wrapper {
+  width: 300px;
+  margin: 0 auto;
+  aspect-ratio: 9/16;
+  border-radius: 12px;
+  transition: 500ms ease-in;
+  transition-property: --color-a, --color-b, --color-c;
+  background: linear-gradient(45deg, var(--color-a), var(--color-b), var(--color-c));
+  position: relative;
+  overflow: hidden;
+  color: white;
+
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, var(--color-a), var(--color-b));
+  filter: blur(50px) brightness(1.5);
+  left: 20%;
+  top: 10%;
+  width: 70%;
+  height: 50%;
+  border-radius: 25px;
+  animation: blob 8s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transform-origin: 60%;
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, var(--color-a), var(--color-b));
+  filter: blur(50px) brightness(1.5);
+  left: 40%;
+  top: 30%;
+  width: 70%;
+  height: 80%;
+  border-radius: 25px;
+  animation: blob 10s infinite cubic-bezier(0.215, 0.61, 0.355, 1) reverse;
+  transform-origin: 60%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  line-height: 1.2;
+  font-size: 42px;
+}
+
+.label {
+  text-align: center;
+  font-size: 32px;
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  background: white;
+  height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--color-b);
+  border: 2px solid white;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  background: var(--color-b);
+  border: 2px solid white;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
+@keyframes blob {
+  0% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  30% {
+    rotate: 40deg;
+  }
+  50% {
+    transform: translate(300px, 390px) scale(1.1);
+  }
+  80% {
+    rotate: 90%;
+  }
+}
+
+@property --color-a {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+
+@property --color-b {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+
+@property --color-c {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+} */
